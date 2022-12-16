@@ -82,5 +82,29 @@ public class PhoneBookTest {
 
         assertEquals(expected, result);
     }
+    @Test
+    public void findByNameFirstTest() {
+        phoneBook.add("Иван", "88889992222");
+        phoneBook.add("Павел", "88889992233");
+
+        String name = "Павел";
+
+        String expected = "88889992222";
+        Object result = phoneBook.findByName(name);
+
+        assertEquals(expected, result);
+    }@Test
+    public void findByNameSecondTest() {
+        phoneBook.add("Иван", "88889992222");
+        phoneBook.add("Павел", "88889992233");
+        phoneBook.add("ssss", "8585");
+
+        String name = "ssss";
+
+        String expected = "8585";
+        Object result = phoneBook.findByName(name);
+
+        assertEquals(expected, result);
+    }
 
 }
