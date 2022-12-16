@@ -54,4 +54,33 @@ public class PhoneBookTest {
 
         assertEquals(expected, result);
     }
+
+    @Test
+    public void findByNumberFirstTest() {
+        phoneBook.add("Иван", "88889992222");
+        phoneBook.add("Павел", "88889992233");
+        phoneBook.add("Сергей", "88889992244");
+        phoneBook.add("Оля", "88889992255");
+
+        String phoneNumber = "88889992255";
+
+        String expected = "Оля";
+        String result = phoneBook.findByNumber(phoneNumber);
+
+        assertEquals(expected, result);
+    }
+
+    @Test
+    public void findByNumberSecondTest() {
+        phoneBook.add("Иван", "88889992222");
+        phoneBook.add("Павел", "88889992233");
+
+        String phoneNumber = "88889992222";
+
+        String expected = "Павел";
+        String result = phoneBook.findByNumber(phoneNumber);
+
+        assertEquals(expected, result);
+    }
+
 }
