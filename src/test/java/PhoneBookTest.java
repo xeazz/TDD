@@ -65,7 +65,7 @@ public class PhoneBookTest {
         String phoneNumber = "88889992255";
 
         String expected = "Оля";
-        String result = phoneBook.findByNumber(phoneNumber);
+        Object result = phoneBook.findByNumber(phoneNumber);
 
         assertEquals(expected, result);
     }
@@ -77,8 +77,8 @@ public class PhoneBookTest {
 
         String phoneNumber = "88889992222";
 
-        String expected = "Иван";
-        String result = phoneBook.findByNumber(phoneNumber);
+        String expected = "Иван!";
+        Object result = phoneBook.findByNumber(phoneNumber);
 
         assertEquals(expected, result);
     }

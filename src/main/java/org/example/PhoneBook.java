@@ -1,22 +1,25 @@
 package org.example;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
     private final Map<String, String> book = new HashMap<>();
+
 
     public int add(String name, String number) {
         book.put(name, number);
         return book.size();
     }
 
-    public String findByNumber(String number) {
-        for (Map.Entry<String, String> key : book.entrySet()) {
-            if (key.getValue().equals(number)) {
-                return key.getKey();
-            }
+    public Object findByNumber(String number) {
+        Set<String> nameContact = book.keySet();
+        Object[] a = nameContact.toArray();
+        ArrayList<String> phoneNumber = new ArrayList<>(book.values());
+        if (phoneNumber.contains(number)) {
+            return a[phoneNumber.indexOf(number)];
         }
         return null;
     }
+
+
 }
