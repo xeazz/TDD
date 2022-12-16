@@ -49,7 +49,7 @@ public class PhoneBookTest {
         String name = "Таня";
         String phoneNumber = "88889992266";
 
-        int expected = 5;
+        int expected = 6;
         int result = phoneBook.add(name, phoneNumber);
 
         assertEquals(expected, result);
