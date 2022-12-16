@@ -25,7 +25,12 @@ public class PhoneBook {
     }
 
     public String printAllNames() {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        for (Map.Entry<String, String> a : book.entrySet()) {
+            sb.append(a.getKey());
+            sb.append("\n");
+        }
+        return sb.toString();
     }
 
 }
