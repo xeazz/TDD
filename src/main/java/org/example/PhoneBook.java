@@ -3,8 +3,7 @@ package org.example;
 import java.util.*;
 
 public class PhoneBook {
-    private final Map<String, String> book = new HashMap<>();
-
+    private final TreeMap<String, String> book = new TreeMap<>();
 
     public int add(String name, String number) {
         book.put(name, number);
@@ -20,8 +19,13 @@ public class PhoneBook {
         }
         return null;
     }
-    public String findByName (String name) {
+
+    public String findByName(String name) {
         return book.get(name);
+    }
+
+    public String printAllNames() {
+        return null;
     }
 
 }

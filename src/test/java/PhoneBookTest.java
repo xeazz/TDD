@@ -106,5 +106,29 @@ public class PhoneBookTest {
 
         assertEquals(expected, result);
     }
+    @Test
+    public void printAllNamesFirstTest() {
+        phoneBook.add("Ярослав", "88889992222");
+        phoneBook.add("Антон", "88889992233");
+        phoneBook.add("Виктор", "8585");
+
+
+        String expected = "Антон\nВиктор\nЯрослав\n";
+        Object result = phoneBook.printAllNames();
+
+        assertEquals(expected, result);
+    }
+    @Test
+    public void printAllNamesSecondTest() {
+        phoneBook.add("Ярослав", "88889992222");
+        phoneBook.add("Антон", "88889992233");
+        phoneBook.add("Виктор", "8585");
+
+
+        String expected = "Антон\nВиктор\nГеоргий\n";
+        Object result = phoneBook.printAllNames();
+
+        assertEquals(expected, result);
+    }
 
 }
